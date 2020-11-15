@@ -1,0 +1,36 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.pagination {
+  display: flex;
+  flex-direction: column;
+  margin: 4rem 0;
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    margin: 0 10px;
+  }
+
+  &__button {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: $color-gray;
+    border: 1px solid $color-gray;
+    border-radius: 5px;
+    &:hover,
+    &:focus {
+      color: $color-black;
+      border: 1px solid $color-black;
+    }
+  }
+}

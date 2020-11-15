@@ -1,0 +1,38 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.navigation {
+  background-color: $color-red;
+  padding: 2rem 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  color: $color-white;
+  &__logo > img {
+    width: 20%;
+    height: auto;
+    margin: 0 5rem;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5rem;
+  }
+
+  &__item {
+    display: flex;
+    margin: 0 2rem;
+    @include font-size(18px);
+  }
+
+  &__link {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
