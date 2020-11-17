@@ -24,15 +24,28 @@
 
   &__item {
     display: flex;
-    margin: 0 2rem;
-    @include font-size(18px);
+    @include font-size(14px);
+    justify-content: center;
+    width: 100px;
   }
 
   &__link {
     color: white;
     text-decoration: none;
-    &:hover {
-      text-decoration: underline;
+    font-weight: bold;
+    position: relative;
+    margin: 0 2rem;
+    &:hover,
+    &:focus {
+      &:before {
+        content: '';
+        top: -10px;
+        width: 25px;
+        left: 40%;
+        position: absolute;
+        border-top: 2px solid white;
+        padding-bottom: 10px;
+      }
     }
   }
 }

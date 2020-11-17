@@ -1,17 +1,14 @@
-.pokemon {
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.pokemons {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
   flex-direction: column;
-  &__filter {
-    display: flex;
-    margin: 20px 0;
-  }
-  &__icon-grid {
-    width: 18px;
-    height: 18px;
-    margin: 0 10px 0 0;
+  &__wrapper {
+    min-width: 300px;
   }
   &__list {
     list-style: none;
@@ -19,5 +16,17 @@
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 15px;
     grid-row-gap: 15px;
+    &--empty {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  &__empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include font-size(14px);
+    font-weight: bold;
   }
 }

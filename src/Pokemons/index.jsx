@@ -1,22 +1,33 @@
 import React from 'react';
 import './style.scss';
-import grid from '../img/grid.svg';
 import { PokemonItem } from '../PokemonItem/index.jsx';
+import { Filter } from '../Filter/index.jsx';
+import pokebal from '../img/pokeball.svg';
 
-export const Pokemons = ({ pokemons }) => {
+export const Pokemons = ({ pokemons, userValue, paramFromFilter }) => {
   return (
     <>
-      <div className="pokemon">
-        <div className="pokemon__wrapper">
-          <div className="pokemon__filter">
-            <img src={grid} className="pokemon__icon-grid" />
-            <span>Přehled Pokémonů</span>
-          </div>
-          <ul className="pokemon__list">
-            {pokemons.map((item) => (
-              <PokemonItem key={item.name} item={item} />
-            ))}
-          </ul>
+      <div className="pokemons">
+        <div className="pokemons__wrapper">
+          <Filter
+            paramFilter={(e) => paramFromFilter(e)}
+            userValue={userValue}
+          />
+
+          {pokemons.length !== 0 ? (
+            <ul className="pokemons__list">
+              {pokemons.map((item) => (
+                <PokemonItem pokemons={pokemons} key={item.name} item={item} />
+              ))}
+            </ul>
+          ) : (
+            <ul className="pokemons__list--empty">
+              <div className="pokemons__empty">
+                <img src={pokebal} alt="pokeball" alt="pokeball"/>
+                <p>Žádné výsledky</p>
+              </div>
+            </ul>
+          )}
         </div>
       </div>
     </>

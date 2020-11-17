@@ -7,7 +7,7 @@ export const Navigation = () => {
     <>
       <nav className="navigation">
         <div className="navigation__logo">
-          <img src="https://fontmeme.com/permalink/201115/64b16bcedd83c388fc339a1662553d79.png" />
+          <img src="https://fontmeme.com/permalink/201115/64b16bcedd83c388fc339a1662553d79.png" alt="logo"/>
         </div>
         <ul className="navigation__list">
           <Link to="/about" className="navigation__link">

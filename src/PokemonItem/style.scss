@@ -2,6 +2,14 @@
 @import '../mixins.scss';
 
 .pokemon {
+  &__loading {
+    color: $color-black;
+    background-color: $color-redLight;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+  }
   &__item {
     position: relative;
     width: 200px;

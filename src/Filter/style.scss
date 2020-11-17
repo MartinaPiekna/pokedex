@@ -1,0 +1,45 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+.filter {
+  display: flex;
+  justify-content: space-between;
+  &__button {
+    background-color: transparent;
+    border: none;
+    color: $color-red;
+    display: flex;
+    align-self: center;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  &__grid {
+    font-weight: bold;
+  }
+  &__grid,
+  &__button {
+    @include font-size(12px);
+  }
+  &__results {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+  &__icon-grid,
+  &__icon-filter {
+    width: 18px;
+    height: 18px;
+    margin: 0 10px 0 0;
+  }
+  &__icon-cancel {
+    width: 6px;
+    height: 6px;
+    margin-right: 5px;
+    border: 2px solid $color-red;
+    padding: 2px 3px;
+    border-radius: 2px;
+  }
+}

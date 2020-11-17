@@ -1,3 +1,6 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
 .search {
   display: flex;
   justify-content: center;
@@ -5,26 +8,22 @@
   margin: 5rem 0 2rem 0;
   &__icons {
     position: relative;
-    width: 30vw;
     display: flex;
+    padding: 0 10px;
+    border-radius: 5px;
+    align-items: center;
+    background-color: $color-white;
   }
   &__icon-search {
-    position: absolute;
-    top: 12px;
-    left: 25px;
     width: 14px;
     height: 14px;
   }
   &__icon-cancel {
-    position: absolute;
-    top: 14px;
-    right: 25px;
     width: 12px;
     height: 12px;
   }
   &__input {
     margin: 0;
-    width: 100%;
     border-color: transparent;
     border-radius: 5px;
     padding: 10px 55px;

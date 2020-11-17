@@ -8,6 +8,11 @@ export const Home = () => {
   const [loading, setLoading] = useState('fail');
   const [currentPage, setCurrentPage] = useState(1);
   const [pokemonsPerPage] = useState(12);
+  const [userValue, setUserValue] = useState('');
+
+  const filtered = pokemons.filter((pokemon) => {
+    return pokemon.name.includes(userValue);
+  });
 
   useEffect(() => {
     setLoading('loading');
@@ -22,16 +27,27 @@ export const Home = () => {
 
   const lastPokemon = currentPage * pokemonsPerPage;
   const firstPokemon = lastPokemon - pokemonsPerPage;
-  const currentPokemons = pokemons.slice(firstPokemon, lastPokemon);
+  const currentPokemons = filtered.slice(firstPokemon, lastPokemon);
   const paginate = (number) => setCurrentPage(number);
 
+  const handleFilter = (e) => {
+    setUserValue(e);
+  };
   return (
     <>
-      <SearchInput />
-      <Pokemons pokemons={currentPokemons} loading={loading} />
+      <SearchInput
+        paramSearch={(userValue) => handleFilter(userValue)}
+        paramChange={userValue}
+      />
+      <Pokemons
+        paramFromFilter={(e) => handleFilter(e)}
+        userValue={userValue}
+        pokemons={currentPokemons}
+        loading={loading}
+      />
       <Pagination
         pokemonsPerPage={pokemonsPerPage}
-        totalPokemons={pokemons.length}
+        totalPokemons={filtered.length}
         paginate={paginate}
       />
     </>
