@@ -2,25 +2,34 @@
 @import '../mixins.scss';
 
 .profile-detail {
-  max-height: 400px;
-  width: 800px;
+  @include desktop {
+    max-height: 400px;
+    width: 800px;
+  }
   &__container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     margin: 0;
     background-color: $color-white;
     padding: 20px;
     border-radius: 5px;
+    @include desktop {
+      flex-direction: row;
+    }
   }
   &__wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: (calc(100% / 3));
     padding: 20px;
+    width: calc(100% / 2);
     border: 1px solid $color-grayLight;
     border-radius: 5px;
+    @include desktop {
+      width: calc(100% / 3);
+    }
   }
   &__name {
     text-transform: capitalize;
@@ -48,10 +57,13 @@
   &__items {
     margin: 10px 0;
     &:last-child span {
-      display: flex;
-      width: fit-content;
-      flex-direction: column;
+      width: 6rem;
       margin-bottom: 10px;
+      @include desktop {
+        width: fit-content;
+        flex-direction: column;
+        display: flex;
+      }
     }
   }
 
@@ -64,6 +76,12 @@
     width: 3rem;
     text-align: center;
     margin-right: 10px;
+    &--last {
+      display: inline;
+      @include desktop {
+        display: inline-block;
+      }
+    }
   }
 
   &__value {

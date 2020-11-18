@@ -5,7 +5,7 @@ import './style.scss';
 export const Navigation = () => {
   const [opened, setOpened] = useState(false);
   const handleClick = () => {
-    setOpened(true);
+    setOpened(!opened);
   };
   return (
     <>

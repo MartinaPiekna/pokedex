@@ -1,0 +1,37 @@
+@import '../variables.scss';
+@import '../mixins.scss';
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-white;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 260px;
+  @include tablet {
+    width: 100%;
+  }
+  @include desktop {
+    width: 100%;
+  }
+  &__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__header {
+    @include font-size(22px);
+    color: $color-red;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  &__text {
+    @include font-size(14px);
+    margin: 10px 0;
+  }
+}

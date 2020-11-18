@@ -6,13 +6,22 @@
   background-color: $color-white;
   flex-direction: column;
   max-width: 800px;
+  &__link-homepage {
+    background-color: $color-blueLight;
+    display: flex;
+    align-items: center;
+    height: 40px;
+  }
   &__link {
     color: $color-black;
     font-weight: bold;
     text-decoration: none;
+    margin-left: 20px;
     @include font-size(14px);
-    background-color: $color-blueLight;
     cursor: pointer;
+    @include desktop {
+      margin: 0;
+    }
   }
 }
 
@@ -23,6 +32,7 @@
   align-items: center;
   height: 50px;
   background-color: $color-blueLight;
+
   &__wrapper {
     display: flex;
   }

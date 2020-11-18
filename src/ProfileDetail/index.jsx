@@ -11,7 +11,8 @@ export const ProfileDetail = (match) => {
             <p className="profile-detail__name">{pokemonProfile.name}</p>
             <img
               src={`https://pokeres.bastionbot.org/images/pokemon/${pokemonProfile.id}.png`}
-              className="profile-detail__image" alt="pokemon-profile"
+              className="profile-detail__image"
+              alt="pokemon-profile"
             />
           </div>
           <div className="profile-detail__info">
@@ -37,7 +38,9 @@ export const ProfileDetail = (match) => {
                 </span>
               </li>
               <li className="profile-detail__items">
-                <span className="profile-detail__property">Dovednosti</span>
+                <span className="profile-detail__property profile-detail__property--last">
+                  Dovednosti
+                </span>
                 {pokemonProfile.abilities.map((index) => (
                   <span
                     key={index.ability.name}

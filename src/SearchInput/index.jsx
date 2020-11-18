@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './style.scss';
 import search from '../img/search.svg';
-import cancel from '../img/cancel.svg';
 
 export const SearchInput = ({ paramSearch, paramChange }) => {
   const [searchValue, setSearchValue] = useState('');
@@ -25,7 +24,10 @@ export const SearchInput = ({ paramSearch, paramChange }) => {
             value={searchValue}
             className="search__input"
           />{' '}
-          <img src={cancel} className="search__icon-cancel" alt="cancel-icon" />
+          <button
+            onClick={() => paramSearch('')}
+            className="search__icon-cancel"
+          ></button>
         </label>
       </div>
     </>
