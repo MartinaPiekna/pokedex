@@ -3,6 +3,10 @@
 .filter {
   display: flex;
   justify-content: space-between;
+  margin: 0 5px;
+  @include tablet {
+    margin: 0;
+  }
   &__button {
     background-color: transparent;
     border: none;
@@ -26,7 +30,7 @@
   &__results {
     display: flex;
     align-items: center;
-    margin: 20px 0;
+    margin: 20px 10px;
   }
   &__icon-grid,
   &__icon-filter {

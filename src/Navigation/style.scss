@@ -3,23 +3,72 @@
 
 .navigation {
   background-color: $color-red;
-  padding: 2rem 0;
+  padding: 1rem 0;
   width: 100vw;
   display: flex;
   justify-content: space-between;
   color: $color-white;
+  @include desktop {
+    padding: 2rem 0;
+  }
   &__logo > img {
-    width: 20%;
+    width: 30%;
     height: auto;
-    margin: 0 5rem;
+    margin: 0 2rem;
+
+    @include desktop {
+      width: 20%;
+      height: auto;
+      margin: 0 5rem;
+    }
+  }
+
+  &__hamburger {
+    display: block;
+    background-color: transparent;
+    background-image: url('../img//menu-icon.svg');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    margin: 0 1.5rem;
+    border: none;
+    cursor: pointer;
+    &--closed {
+      display: none;
+    }
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__menu-mobile  {
+    @include desktop {
+      display: none;
+    }
   }
 
   &__list {
     list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 5rem;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: red;
+    z-index: 1;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    &--closed {
+      display: none;
+    }
+    @include desktop {
+      position: initial;
+      list-style: none;
+      background-color: transparent;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 5rem;
+      border-radius: none;
+    }
   }
 
   &__item {
@@ -35,16 +84,18 @@
     font-weight: bold;
     position: relative;
     margin: 0 2rem;
-    &:hover,
-    &:focus {
-      &:before {
-        content: '';
-        top: -10px;
-        width: 25px;
-        left: 40%;
-        position: absolute;
-        border-top: 2px solid white;
-        padding-bottom: 10px;
+    @include desktop {
+      &:hover,
+      &:focus {
+        &:before {
+          content: '';
+          top: -10px;
+          width: 25px;
+          left: 40%;
+          position: absolute;
+          border-top: 2px solid white;
+          padding-bottom: 10px;
+        }
       }
     }
   }

@@ -5,7 +5,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5rem 0 2rem 0;
+  @include desktop {
+    margin: 5rem 0 2rem 0;
+  }
+  margin: 3rem 0 0 0;
   &__icons {
     position: relative;
     display: flex;

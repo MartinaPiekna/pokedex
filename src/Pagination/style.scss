@@ -10,11 +10,15 @@
     justify-content: center;
     align-items: center;
     list-style: none;
+    flex-wrap: wrap;
+    @include desktop {
+      flex-wrap: nowrap;
+    }
   }
 
   &__item {
     display: flex;
-    margin: 0 10px;
+    margin: 5px 10px;
   }
 
   &__button {
