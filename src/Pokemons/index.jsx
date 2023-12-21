@@ -23,7 +23,7 @@ export const Pokemons = ({ pokemons, userValue, paramFromFilter }) => {
           ) : (
             <ul className="pokemons__list--empty">
               <div className="pokemons__empty">
-                <img src={pokebal} alt="pokeball" alt="pokeball"/>
+                <img src={pokebal} alt="pokeball" />
                 <p>Žádné výsledky</p>
               </div>
             </ul>

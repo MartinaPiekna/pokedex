@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './style.scss';
 
-export const PokemonItem = ({ item, allPokemons }) => {
+export const PokemonItem = ({ item }) => {
   const [pokemonItem, setPokemonItem] = useState({});
   const [loading, setLoading] = useState('fail');
   useEffect(() => {
@@ -26,8 +26,9 @@ export const PokemonItem = ({ item, allPokemons }) => {
       <>
         <div className="pokemon__wrapper">
           <img
-            src={`https://pokeres.bastionbot.org/images/pokemon/${id}.png`}
-            className="pokemon__image" alt="pokemon"
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${id}.png`}
+            className="pokemon__image"
+            alt="pokemon"
           />
         </div>
         <p key={pokemonItem.name} className="pokemon__name">

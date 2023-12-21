@@ -5,8 +5,10 @@
 
 ## Spuštění
 
+- node.js v 16
+
 - instalace závislostí
-  `yarn install`
+  `npm install`
 
 - spuštění appky
-  `yarn start`
+  `npm start`

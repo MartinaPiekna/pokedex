@@ -13,7 +13,7 @@ export const ProfileStatistic = (match) => {
           <div className="profile-statistic__wrapper">
             <p className="profile-statistic__name">{pokemonStatistic.name}</p>
             <img
-              src={`https://pokeres.bastionbot.org/images/pokemon/${pokemonStatistic.id}.png`}
+              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonStatistic.id}.svg`}
               className="profile-statistic__image"
               alt="pokemon-statistic"
             />

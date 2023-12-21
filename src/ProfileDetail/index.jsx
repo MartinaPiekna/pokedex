@@ -10,7 +10,7 @@ export const ProfileDetail = (match) => {
           <div className="profile-detail__wrapper">
             <p className="profile-detail__name">{pokemonProfile.name}</p>
             <img
-              src={`https://pokeres.bastionbot.org/images/pokemon/${pokemonProfile.id}.png`}
+              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${pokemonProfile.id}.svg`}
               className="profile-detail__image"
               alt="pokemon-profile"
             />
